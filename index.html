@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>OTP GENERATOR</h1>
+        <p id="cd1" style="font-size:30px">Genarated OTP</p>
+        <button id="btn1">click here to generate OTP</button>
+        <a href="./index.html"><button style="background-color: rgb(220, 151, 220);margin:10px;" >Reset</button>
+    </div>
+    <script>
+            let getm1=document.getElementsByClassName("main")[0];
+            getm1.setAttribute("style","width:300px;height:200px;border:2px solid;text-align: center;padding:50px;margin:100px;margin-left:500px; background-image:repeating-linear-gradient(400deg,red,gold,green);box-shadow:3px 3px 3px;border-radius:20px");
+            let getbtn=document.getElementById("btn1");
+            getbtn.addEventListener("click",()=>{
+                let getcd1=document.getElementById("cd1");            
+                let res=""
+                for(let i=0;i<4;i++){
+                    res+=Math.floor(Math.random()*9);
+                }
+                getcd1.innerHTML=res;
+            });
+            getbtn.setAttribute("style","background-color: rgb(123, 123, 248);")
+    </script>
+</body>
+</html>
